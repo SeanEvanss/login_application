@@ -1,4 +1,4 @@
-org/example/LoginActivity.class
-org/example/DateConverter.class
-org/example/HelloWorldAction.class
-org/example/IndexAction.class
+org\example\HelloWorldAction.class
+org\example\DateConverter.class
+org\example\LoginActivity.class
+org\example\IndexAction.class

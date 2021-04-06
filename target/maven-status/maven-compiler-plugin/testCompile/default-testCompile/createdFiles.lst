@@ -1,2 +1,2 @@
-org/example/IndexActionTest.class
-org/example/HelloWorldActionTest.class
+org\example\HelloWorldActionTest.class
+org\example\IndexActionTest.class
