@@ -44,7 +44,6 @@ public class LoginController {
             //  The query result is returned in a 'ResultSet' object called 'rset'.
             System.out.println("The SQL statement is: " + pstmt.toString() + "\n"); // Echo For debugging
             rset = pstmt.executeQuery();
-
             // Process the 'ResultSet' by scrolling the cursor forward via next().
             //  For each row, retrieve the contents of the cells with getXxx(columnName).
             System.out.println("The record selected is:");
@@ -56,8 +55,12 @@ public class LoginController {
                 String userPassword = rset.getString("userPassword");  // retrieve a 'double'-cell in the row
                 System.out.println(userName + ", " + userPassword);
                 if(userName.equals(inputUserName) && userPassword.equals(inputUserPassword))
+                {
+                    conn.close();
                     return true;
+                }
             }
+            conn.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
