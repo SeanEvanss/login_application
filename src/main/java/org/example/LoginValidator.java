@@ -3,7 +3,7 @@ package org.example;
 import java.applet.Applet;
 import java.sql.*;
 
-public class LoginController {
+public class LoginValidator {
 
     private Connection conn;
     private Statement stmt;
@@ -11,12 +11,12 @@ public class LoginController {
     private String sqlUser = "root";
     private String sqlPassword = "1234";
 
-    LoginController(){
+    LoginValidator(){
 
     }
 
     // User input username and password validation
-    public boolean validateLogin(String inputUserName, String inputUserPassword) {
+    public boolean queryLoginDatabase(String inputUserName, String inputUserPassword) {
 
         // Load mysql jdbc Driver Class
         try {

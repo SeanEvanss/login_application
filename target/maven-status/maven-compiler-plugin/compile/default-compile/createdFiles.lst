@@ -1,3 +1,4 @@
+org\example\LoginValidator.class
 org\example\HelloWorldAction.class
 org\example\DateConverter.class
 org\example\LoginActivity.class

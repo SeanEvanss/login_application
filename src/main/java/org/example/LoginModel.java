@@ -1,8 +1,10 @@
 package org.example;
+import java.security.MessageDigest;
 
 public class LoginModel {
 
     private String username, password;
+
 
     public LoginModel(String username, String password)
     {
@@ -24,5 +26,12 @@ public class LoginModel {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public boolean validateLogin(){
+
+        LoginValidator loginValidator = new LoginValidator();
+
+        return loginValidator.queryLoginDatabase(username, password);
     }
 }
